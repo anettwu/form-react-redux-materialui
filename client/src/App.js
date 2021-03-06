@@ -8,15 +8,19 @@ import {
 
 import Home from './pages/Home';
 import Form from './pages/Form';
+import Header from './components/Header';
 
 function App() {
 	return (
-		<Router>
-			<Switch>
-				<Route exact path='/' component={Home} />
-				<Route exact path='/form' component={Form} />
-			</Switch>
-		</Router>
+		<>
+			<Header />
+			<Router>
+				<Switch>
+					<Route exact path='/' component={Home} />
+					<Route exact path='/form' component={Form} />
+				</Switch>
+			</Router>
+		</>
 	);
 }
 
